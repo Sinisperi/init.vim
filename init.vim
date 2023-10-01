@@ -8,6 +8,14 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
+lua <<EOF
+require('nvim-treesitter.configs').setup {
+    ensure_installed = {"c", "cpp"},
+    highlight = { enable = true },
+    indent = { enable = true }
+}
+EOF
+
 set encoding=UTF-8
 
 set number	
